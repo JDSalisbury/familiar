@@ -19,4 +19,7 @@ setup(
     ],
     long_description=long_description,
     long_description_content_type="text/markdown",
+    url="https://github.com/JDSalisbury/familiar",
+    author='Jeff Salisbury',
+    author_email='pip.familiar@gmail.com'
 )
