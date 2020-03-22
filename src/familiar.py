@@ -1,3 +1,9 @@
+from django.conf import settings
+
+
+SETTING_VERSION = getattr(settings, SETTING_VERSION, "3.5")
+
+
 def dice_roll(number_of_dice, dice_sides, mod):
     import random
     total = 0

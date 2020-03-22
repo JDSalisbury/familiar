@@ -3,13 +3,18 @@ from setuptools import setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+install_requires = open('requirements.txt').read().split('\n')
+install_requires = install_requires,
+
+
 setup(
     name='familiar',
-    version='0.0.1',
+    version='0.0.2',
     description='Dungeons and Dragons helper functions',
     py_modules=['familiar'],
     package_dir={'': 'src'},
     classifiers=[
+        "Framework :: Django",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
