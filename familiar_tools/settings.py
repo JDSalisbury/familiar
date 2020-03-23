@@ -1,7 +1,6 @@
 from django.conf import settings
 from rest_framework.settings import APISettings
 
-settings.configure()
 
 USER_SETTINGS = getattr(settings, 'FAMILIAR', None)
 
