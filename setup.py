@@ -37,7 +37,7 @@ def get_package_data(package):
 
 setup(
     name='familiar',
-    version='0.0.9',
+    version='0.1.0',
     description='Dungeons and Dragons helper functions',
     py_modules=['familiar'],
     # package_dir={'': 'familiar_tools'},
