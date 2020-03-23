@@ -1,4 +1,4 @@
-from familiar.familiar import dice_roll, get_modifier
+from familiar_utils.familiar import dice_roll, get_modifier
 
 
 def test_dice_roll():

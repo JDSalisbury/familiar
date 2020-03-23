@@ -1,10 +1,38 @@
 from setuptools import setup
+import re
+import os
+import sys
+
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 install_requires = open('requirements.txt').read().split('\n')
-install_requires = install_requires,
+
+
+def get_packages(package):
+    """
+    Return root package and all sub-packages.
+    """
+    return [dirpath
+            for dirpath, dirnames, filenames in os.walk(package)
+            if os.path.exists(os.path.join(dirpath, '__init__.py'))]
+
+
+def get_package_data(package):
+    """
+    Return all files under the root package, that are not in a
+    package themselves.
+    """
+    walk = [(dirpath.replace(package + os.sep, '', 1), filenames)
+            for dirpath, dirnames, filenames in os.walk(package)
+            if not os.path.exists(os.path.join(dirpath, '__init__.py'))]
+
+    filepaths = []
+    for base, filenames in walk:
+        filepaths.extend([os.path.join(base, filename)
+                          for filename in filenames])
+    return {package: filepaths}
 
 
 setup(
@@ -12,8 +40,9 @@ setup(
     version='0.0.9',
     description='Dungeons and Dragons helper functions',
     py_modules=['familiar'],
-    package_dir={'': 'src'},
-    # packages=['src'],
+    # package_dir={'': 'familiar_tools'},
+    packages=get_packages('familiar_tools'),
+    package_data=get_package_data('familiar_tools'),
     classifiers=[
         "Framework :: Django",
         "Programming Language :: Python :: 3",
