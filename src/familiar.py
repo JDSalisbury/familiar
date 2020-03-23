@@ -1,7 +1,4 @@
-from django.conf import settings
-
-
-SETTING_VERSION = getattr(settings, SETTING_VERSION, "3.5")
+from src.settings import api_settings
 
 
 def dice_roll(number_of_dice, dice_sides, mod):
@@ -16,3 +13,7 @@ def get_modifier(stat):
     mod = stat - 10
     mod = mod / 2
     return round(mod)
+
+
+def get_game_version():
+    return api_settings.VERSION
