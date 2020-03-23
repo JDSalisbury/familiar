@@ -1,4 +1,4 @@
-from .settings import api_settings
+from familiar.settings import api_settings
 
 
 def dice_roll(number_of_dice, dice_sides, mod):
