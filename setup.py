@@ -9,7 +9,7 @@ install_requires = install_requires,
 
 setup(
     name='familiar',
-    version='0.0.2',
+    version='0.0.3',
     description='Dungeons and Dragons helper functions',
     py_modules=['familiar'],
     package_dir={'': 'src'},
