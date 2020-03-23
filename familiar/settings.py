@@ -13,4 +13,4 @@ IMPORT_STRINGS = (
     'VERSION',
 )
 
-api_settings = APISettings(USER_SETTINGS, DEFAULTS, IMPORT_STRINGS)
+familiar_settings = APISettings(USER_SETTINGS, DEFAULTS, IMPORT_STRINGS)

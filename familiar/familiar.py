@@ -1,4 +1,4 @@
-from familiar_tools.settings import api_settings
+from .settings import familiar_settings
 
 
 def dice_roll(number_of_dice, dice_sides, mod):
@@ -16,4 +16,5 @@ def get_modifier(stat):
 
 
 def get_game_version():
-    return api_settings.VERSION
+    return familiar_settings.VERSION
+
