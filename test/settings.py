@@ -1,16 +1,2 @@
-
-SECRET_KEY = 'secret'
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': ':memory:'
-    }
-}
-INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-)
-ROOT_URLCONF = 'tests.test_familiar'
-FAMILIAR = {
-    'VERSION': '4'
-}
+# Test settings for familiar package
+# No Django configuration needed
